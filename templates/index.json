@@ -1,0 +1,414 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "clickable_hero_home": {
+      "type": "clickable-hero",
+      "settings": {
+        "image_mobile": "shopify://shop_images/Gemini_Generated_Image_kg0cpfkg0cpfkg0c.jpg",
+        "image_desktop": "shopify://shop_images/Gemini_Generated_Image_vglhelvglhelvglh_2e3d1a1c-80c5-4570-b634-582685429125.jpg",
+        "alt_text": "NexaMart — Effortless Elegance Every Day",
+        "link": "shopify://collections/all"
+      }
+    },
+    "lifestyle_showcase_home": {
+      "type": "lifestyle-showcase",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Crafted with premium materials & precision"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Blending luxury aesthetics with daily utility"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Complimentary express shipping & 14-day guarantee"
+          }
+        },
+        "hotspot_1": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "url": "/products/smart-ring?product_title=3-in-1+Magnetic+Charging+Station&product_price=79.00&product_img=wireless-charger-product.png",
+            "title": "3-in-1 Magnetic Charging Station",
+            "price": "$79.00",
+            "fallback_image_asset": "wireless-charger-product.png",
+            "top_position": 60,
+            "left_position": 27
+          }
+        },
+        "hotspot_2": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "url": "/products/sollora-led-desk-lamp?product_title=Ambient+LED+Jellyfish+Tower+Lamp&product_price=59.00&product_img=jellyfish-lamp-product.png",
+            "title": "Ambient LED Jellyfish Tower Lamp",
+            "price": "$59.00",
+            "fallback_image_asset": "jellyfish-lamp-product.png",
+            "top_position": 30,
+            "left_position": 53
+          }
+        },
+        "hotspot_3": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "url": "/products/sollora-creative-fish-shaped-scale-scraper?product_title=Orange+Crab+Desk+Organizer+Box&product_price=29.00&product_img=crab-organizer-product.png",
+            "title": "Orange Crab Desk Organizer Box",
+            "price": "$29.00",
+            "fallback_image_asset": "crab-organizer-product.png",
+            "top_position": 67,
+            "left_position": 41
+          }
+        },
+        "hotspot_4": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "url": "/products/sollora-westmore-beauty-body-coverage?product_title=Maison+Luna+Botanical+Retinol+Serum&product_price=45.00&product_img=serum-dropper-product.png",
+            "title": "Maison Luna Botanical Retinol Serum",
+            "price": "$45.00",
+            "fallback_image_asset": "serum-dropper-product.png",
+            "top_position": 65,
+            "left_position": 72
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "hotspot_1",
+        "hotspot_2",
+        "hotspot_3",
+        "hotspot_4"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_split": "45% 55%",
+        "corner_radius": 24,
+        "content_bg": "#faf6f5",
+        "heading_color": "#1c1917",
+        "subtext_color": "#57534e",
+        "accent_color": "#e33054",
+        "eyebrow_text": "NEXAMART SIGNATURE COLLECTION",
+        "title": "Elevate Your Space [Elevate Your Life]",
+        "subtitle": "Premium products that blend beauty, functionality, and timeless design.",
+        "btn_text": "DISCOVER LIFESTYLE",
+        "btn_url": "shopify://collections/all",
+        "btn_bg": "#e33054",
+        "btn_color": "#ffffff",
+        "button_radius": 8,
+        "secondary_btn_text": "",
+        "secondary_btn_url": "",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "best_sellers_section": {
+      "type": "best-sellers",
+      "settings": {
+        "badge_text": "🔥 MOST LOVED PRODUCTS",
+        "badge_bg": "#fff0f3",
+        "badge_color": "#ff2e54",
+        "title": "Best Sellers of the [Season]",
+        "subtitle": "Hand-picked customer favorites loved by thousands worldwide.",
+        "header_alignment": "center",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "enable_slider": true,
+        "grid_gap": 24,
+        "card_style": "elevated",
+        "image_ratio": "portrait",
+        "card_corner_radius": 16,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_swatches": false,
+        "show_quick_add": true,
+        "show_card_badge": true,
+        "card_badge_text": "BEST SELLER",
+        "show_view_all": true,
+        "view_all_text": "Explore All Best Sellers",
+        "color_scheme": "background-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "featured_product_pNbQEH": {
+      "type": "featured-product",
+      "blocks": {
+        "badge_spotlight": {
+          "type": "text",
+          "settings": {
+            "text": "⭐ FLAGSHIP SPOTLIGHT SELECTION",
+            "text_style": "uppercase"
+          }
+        },
+        "title_cePDgT": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_XAkNN7": {
+          "type": "price",
+          "settings": {
+            "price_style": "price",
+            "price_size_2": 1,
+            "badge_size": 14,
+            "sale_price_color": "#e33054",
+            "badge_price": "#ffffff",
+            "badge_bg": "#E33054",
+            "badge_border": "#ffd6dc",
+            "price_bold": true,
+            "price_bold_2": true,
+            "badge_hide": false,
+            "taxes_hide": true,
+            "shipping_hide": true,
+            "padding_top": 8,
+            "padding_bottom": 8
+          }
+        },
+        "variant_picker_BtXMtY": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatchType": "color",
+            "optionName": "Color",
+            "swatchStyle": "round",
+            "swatchSize": 32,
+            "swatchHeight": 32
+          }
+        },
+        "buy_buttons_Mxy8CL": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "quantity_selector_rwNnNX": {
+          "type": "quantity_selector",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "badge_spotlight",
+        "title_cePDgT",
+        "price_XAkNN7",
+        "quantity_selector_rwNnNX",
+        "variant_picker_BtXMtY",
+        "buy_buttons_Mxy8CL"
+      ],
+      "name": "Featured Spotlight Product",
+      "settings": {
+        "product": "",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        // "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "home_product_grid": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Explore More Favorites",
+        "description": "",
+        "collection_text_alignment": "center",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "show_collection_image": false,
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "navigation_on_desk": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "image_no_crop": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_scroll_tags": false,
+        "enable_quick_desc": false,
+        "quick_desc_legth": 90,
+        "quick_desc_size": 14,
+        "enable_quick_add": true,
+        "show_secondary_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "navigation_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
+    "ce80fbd5-16e8-4f22-b171-7b093ecf87a6": {
+      "type": "review-slider",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "title": "Absolutely Stunning!",
+            "text": "<p>The quality exceeded all my expectations. Transforms the atmosphere of my home instantly.</p>",
+            "link_label": "",
+            "link": "",
+            "customer_name": "Sofia R.",
+            "city_name": "Verified Buyer"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "title": "Pure Perfection!",
+            "text": "<p>Fast express shipping, luxury packaging, and the product works flawlessly every day.</p>",
+            "link_label": "",
+            "link": "",
+            "customer_name": "Marta K.",
+            "city_name": "Verified Buyer"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "title": "Worth Every Penny",
+            "text": "<p>I am recommending NexaMart to all my family and friends. Truly a 5-star brand experience.</p>",
+            "link_label": "",
+            "link": "",
+            "customer_name": "Sara J.",
+            "city_name": "Verified Buyer"
+          }
+        },
+        "review_4": {
+          "type": "review",
+          "settings": {
+            "title": "Highly Recommended!",
+            "text": "<p>Remarkable quality and aesthetics. The best online shopping experience I've had this year.</p>",
+            "link_label": "",
+            "link": "",
+            "customer_name": "Wendy W.",
+            "city_name": "Verified Buyer"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3",
+        "review_4"
+      ],
+      "name": "Testimonial",
+      "settings": {
+        "kicker": "Reviews",
+        "title": "Loved by customers",
+        "subheading": "Real notes from people who shop with us.",
+        "heading_size": "h1",
+        "heading_center": "center",
+        "image_width": "sixth",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "color_star": "#E33054",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "navigation_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "sollora_faq_home": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "category": "shipping",
+            "question": "How fast is shipping, and how do I track my order?",
+            "answer": "<p>Shipping takes around 14 business days. All orders include tracked shipping.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "category": "returns",
+            "question": "What is your 14-Day Money-Back Guarantee policy?",
+            "answer": "<p>We want you to shop with complete peace of mind. Every NexaMart order comes with an unconditional <strong>14-Day Risk-Free Trial</strong>. If you are not 100% satisfied with your results, contact our support concierge for an effortless, prepaid return and full refund.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "category": "product",
+            "question": "Are NexaMart products covered by a warranty?",
+            "answer": "<p>Yes! Every NexaMart item includes our complimentary <strong>1-Year Full Replacement Warranty</strong>. In the unlikely event of any manufacturing or performance issues, we replace your item immediately at zero additional cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "badge_text": "Help",
+        "heading": "Questions, answered",
+        "subheading": "Everything you need to know about NexaMart shipping, warranty, and our 14-day money-back guarantee.",
+        "show_categories": false,
+        "open_first_item": true,
+        "color_scheme": "background-1",
+        "badge_bg": "#fff0f3",
+        "badge_color": "#e33054",
+        "heading_color": "#1c1917",
+        "subtext_color": "#57534e",
+        "answer_color": "#3f3f46",
+        "show_support_box": false,
+        "support_heading": "Still have questions?",
+        "support_text": "Our dedicated Concierge Team is available 24/7 to assist you.",
+        "support_btn_text": "Contact Concierge Support",
+        "support_link": "/pages/contact",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "clickable_hero_home",
+    "lifestyle_showcase_home",
+    "best_sellers_section",
+    "featured_product_pNbQEH",
+    "home_product_grid",
+    "ce80fbd5-16e8-4f22-b171-7b093ecf87a6",
+    "sollora_faq_home"
+  ]
+}

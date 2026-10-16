@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b11d4998-a007-4a26-990e-fba6ade13b76": {
+      "type": "rich-text",
+      "blocks": {
+        "6796aae3-0b94-4c0d-a460-ab06d9a3a33e": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>FAQ</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "eb505d90-0714-42cf-b794-4012d27e6860": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quick answers about shipping, returns, and warranty.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "6796aae3-0b94-4c0d-a460-ab06d9a3a33e",
+        "eb505d90-0714-42cf-b794-4012d27e6860"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-52650f17-4d3d-4be4-aa3c-4ef82f95ed07",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "93d21b74-3b8b-4fd7-aea5-1624b545659e": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_shipping": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How fast is shipping, and how do I track my order?",
+            "icon": "none",
+            "row_content": "<p>Shipping takes around 14 business days. All orders include tracked shipping.</p>",
+            "page": ""
+          }
+        },
+        "faq_returns": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your 14-Day Money-Back Guarantee?",
+            "icon": "none",
+            "row_content": "<p>Every NexaMart order includes an unconditional 14-day risk-free trial. If you are not 100% satisfied, email us at <a href=\"mailto:nexamartt.2026@gmail.com\">nexamartt.2026@gmail.com</a> for a prepaid return and full refund.</p>",
+            "page": ""
+          }
+        },
+        "faq_warranty": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are NexaMart products covered by a warranty?",
+            "icon": "none",
+            "row_content": "<p>Yes. Every item includes a complimentary 1-year full replacement warranty. If there is a manufacturing or performance issue, we replace your item at no extra cost.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_shipping",
+        "faq_returns",
+        "faq_warranty"
+      ],
+      "settings": {
+        "caption": "Find answers to our most frequently asked questions.",
+        "heading": "Shipping, returns & warranty",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "scheme-52650f17-4d3d-4be4-aa3c-4ef82f95ed07",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "b11d4998-a007-4a26-990e-fba6ade13b76",
+    "main",
+    "93d21b74-3b8b-4fd7-aea5-1624b545659e"
+  ]
+}

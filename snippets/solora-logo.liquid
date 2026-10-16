@@ -1,0 +1,25 @@
+{%- comment -%}
+  NexaMart logo from theme assets (assets/logo.svg / nexamart-logo.svg).
+  Aspect ratio from SVG viewBox 283.46 x 231.03.
+{%- endcomment -%}
+{%- liquid
+  assign logo_width = settings.logo_width | default: 90
+  if logo_width < 50
+    assign logo_width = 50
+  endif
+  if logo_width > 120
+    assign logo_width = 120
+  endif
+  assign logo_height = logo_width | times: 231.03 | divided_by: 283.46 | round
+-%}
+<div class="header__heading-logo-wrapper solora-logo-wrapper">
+  <img
+    src="{{ 'logo.svg' | asset_url }}"
+    alt="NexaMart"
+    class="header__heading-logo motion-reduce solora-logo"
+    width="{{ logo_width }}"
+    height="{{ logo_height }}"
+    loading="eager"
+    fetchpriority="high"
+  >
+</div>

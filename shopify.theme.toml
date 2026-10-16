@@ -1,0 +1,6 @@
+# Shopify CLI theme configuration for NexaMart
+# Working directory: C:\Users\zezos\OneDrive\Desktop\orca\NexaMart
+
+[environments.default]
+store = "nexamart-hyunb36w.myshopify.com"
+path = "."

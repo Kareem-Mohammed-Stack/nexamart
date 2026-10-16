@@ -1,0 +1,37 @@
+/* Best Sellers — section header always centered */
+.best-sellers-section .best-sellers__header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.best-sellers-section .best-sellers__header-top {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.best-sellers-section .best-sellers__badge {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.best-sellers-section .best-sellers__title,
+.best-sellers-section .best-sellers__subtitle {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+.best-sellers-section .best-sellers__subtitle {
+  max-width: 680px;
+}

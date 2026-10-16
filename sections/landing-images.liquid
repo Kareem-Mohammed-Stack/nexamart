@@ -1,0 +1,289 @@
+{%- comment -%}
+  Product metafields: list or single file reference
+  - Mobile images: custom.landing_images
+  - Desktop images: custom.landing_images_desktop
+{%- endcomment -%}
+
+{%- liquid
+  assign mf_ns = section.settings.metafield_namespace | default: 'custom' | strip
+  assign mf_key_mobile = section.settings.metafield_key | default: 'landing_images' | strip
+  assign mf_key_desktop = section.settings.desktop_metafield_key | default: 'landing_images_desktop' | strip
+
+  # Read mobile images from product metafields (supports both .value and direct, list and single)
+  assign mobile_images = product.metafields[mf_ns][mf_key_mobile].value
+  if mobile_images == blank
+    assign mobile_images = product.metafields[mf_ns][mf_key_mobile]
+  endif
+  if mobile_images == blank
+    assign mobile_images = product.metafields.custom.landing_images.value
+  endif
+  if mobile_images == blank
+    assign mobile_images = product.metafields.custom.landing_images
+  endif
+
+  # Read desktop images from product metafields (supports both .value and direct, list and single)
+  assign desktop_images = product.metafields[mf_ns][mf_key_desktop].value
+  if desktop_images == blank
+    assign desktop_images = product.metafields[mf_ns][mf_key_desktop]
+  endif
+  if desktop_images == blank
+    assign desktop_images = product.metafields.custom.landing_images_desktop.value
+  endif
+  if desktop_images == blank
+    assign desktop_images = product.metafields.custom.landing_images_desktop
+  endif
+
+  # Fallback: if desktop key was entered in mobile field and desktop was blank
+  if mf_key_mobile contains 'desktop' and desktop_images == blank
+    assign desktop_images = mobile_images
+    assign mobile_images = blank
+  endif
+-%}
+
+{%- if mobile_images != blank or desktop_images != blank -%}
+  {%- liquid
+    assign cols_m = section.settings.columns_mobile | default: '1' | plus: 0
+    assign cols_d = section.settings.columns_desktop | default: 1
+    if section.settings.full_width
+      assign sizes = '100vw'
+    else
+      assign sizes = '(min-width: 750px) 1200px, 100vw'
+    endif
+  -%}
+
+  {%- style -%}
+    #shopify-section-{{ section.id }},
+    .landing-images-{{ section.id }} {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .landing-images-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+    @media screen and (min-width: 750px) {
+      .landing-images-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+    /* If only desktop images exist, hide entire section on mobile */
+    {%- if mobile_images == blank and desktop_images != blank -%}
+      @media screen and (max-width: 749px) {
+        .landing-images-{{ section.id }} {
+          display: none !important;
+        }
+      }
+    {%- endif -%}
+
+    /* If only mobile images exist, hide entire section on desktop */
+    {%- if desktop_images == blank and mobile_images != blank -%}
+      @media screen and (min-width: 750px) {
+        .landing-images-{{ section.id }} {
+          display: none !important;
+        }
+      }
+    {%- endif -%}
+
+    .landing-images-{{ section.id }} .landing-images__heading {
+      text-align: {{ section.settings.heading_alignment }};
+      margin: 0 0 2rem;
+    }
+
+    .landing-images-{{ section.id }} .landing-images__grid {
+      display: grid;
+      gap: 0;
+    }
+
+    /* Desktop grid: visible on desktop (>=750px), hidden on mobile */
+    .landing-images-{{ section.id }} .landing-images__grid--desktop {
+      display: none;
+    }
+    @media screen and (min-width: 750px) {
+      .landing-images-{{ section.id }} .landing-images__grid--desktop {
+        display: grid;
+        grid-template-columns: repeat({{ cols_d }}, minmax(0, 1fr));
+      }
+    }
+
+    /* Mobile grid: visible on mobile (<750px), hidden on desktop */
+    .landing-images-{{ section.id }} .landing-images__grid--mobile {
+      display: grid;
+      grid-template-columns: repeat({{ cols_m }}, minmax(0, 1fr));
+    }
+    @media screen and (min-width: 750px) {
+      .landing-images-{{ section.id }} .landing-images__grid--mobile {
+        display: none !important;
+      }
+    }
+
+    .landing-images-{{ section.id }} .landing-images__item {
+      border-radius: {{ section.settings.image_radius }}px;
+      overflow: hidden;
+    }
+    .landing-images-{{ section.id }} .landing-images__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  {%- endstyle -%}
+
+  <div class="landing-images-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+    <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="landing-images__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if desktop_images != blank -%}
+        <div class="landing-images__grid landing-images__grid--desktop">
+          {%- if desktop_images.first != blank or desktop_images.size > 0 or desktop_images[0] != blank -%}
+            {%- for image in desktop_images -%}
+              {%- render 'landing-image', image: image, sizes: sizes -%}
+            {%- endfor -%}
+          {%- else -%}
+            {%- render 'landing-image', image: desktop_images, sizes: sizes -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if mobile_images != blank -%}
+        <div class="landing-images__grid landing-images__grid--mobile">
+          {%- if mobile_images.first != blank or mobile_images.size > 0 or mobile_images[0] != blank -%}
+            {%- for image in mobile_images -%}
+              {%- render 'landing-image', image: image, sizes: sizes -%}
+            {%- endfor -%}
+          {%- else -%}
+            {%- render 'landing-image', image: mobile_images, sizes: sizes -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Landing images",
+  "tag": "section",
+  "class": "section-landing-images",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "metafield_namespace",
+      "label": "Metafield namespace",
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "Mobile metafield key",
+      "default": "landing_images",
+      "info": "Metafield key for mobile images (e.g. landing_images)"
+    },
+    {
+      "type": "text",
+      "id": "desktop_metafield_key",
+      "label": "Desktop metafield key",
+      "default": "landing_images_desktop",
+      "info": "Metafield key for desktop images (e.g. landing_images_desktop)"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center",
+      "label": "Heading alignment"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 1,
+      "label": "Columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ],
+      "default": "1",
+      "label": "Columns on mobile"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "label": "Corner radius"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Padding bottom"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing images"
+    }
+  ]
+}
+{% endschema %}
